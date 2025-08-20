@@ -1,0 +1,104 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: #F6E6CB;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background: #A0937D; /* earthy neutral */
+  color: #fff;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+.nav-list a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-list a:hover {
+  background-color: #E7D4B5;
+  text-decoration: none;
+}
+
+/* Grid layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+/* Flexbox cards */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 1rem;
+}
+.cards article {
+  background: #E7D4B5;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 6rem;
+  flex: 1 1 15rem;
+  color: #333;
+}
+
+/* Sidebar */
+aside {
+  background: #B6C7AA;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #333;
+}
+.side-links {
+  list-style:disc;
+  padding: 1rem;
+  margin: 0;
+  display:grid;
+}
+.side-links a {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-weight: 500;
+}
+.side-links a:hover {
+  background-color: #A0937D;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #A0937D;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; }
+  .nav-list { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .cards { flex-direction: column; }
+}
